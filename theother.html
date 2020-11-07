@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="stylesheet" type="text/css" href="css/_reset.css">
+   <link rel="stylesheet" type="text/css" href="css/flickity.css" media="screen">
+   <link rel="stylesheet" type="text/css" href="css/fonts.css">
+   <link rel="stylesheet" type="text/css" href="css/main.css">
+   <link rel="stylesheet" type="text/css" href="css/prepos-auto-output.css">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+
+<body id="the-other">
+   <section class="intro">
+      <h3>
+         Seeing I: The Other, as part of the European Media Arts Residency Exchange 
+      </h3>
+      <div class="intro-top">
+         <p>Culminating an online residency with the the European Media Art Platforms program at Werkleitz, as part of the Creative Europe Culture Programme of the European Union, we are streaming the lives of three migrants from around the world, in first person point of view.</p>
+         <p>Focusing on real-life lives that are neither sensational, nor a spectacle, Seeing I: The Other explores the movement of people in 2020; how different cultures, societies, and languages affects one’s sense of self, and - especially during the coronavirus pandemic - the ability to share in one’s experience and world, only through digital technologies.</p>
+      </div>
+      <div class="intro-bottom">
+         <p>Without too much interference to their daily routine, we have asked people to:</p>
+         <p>⁃	Wear the pair of glasses/recorder from the moment they wake up, to the moment they go to sleep. </p>
+         <p>⁃	To not remove the recorder, or switch the recorder off for the entirety of that day, unless they feel unsafe.</p>
+         <p>⁃	We have specifically ask people to be sociable, and to not use their phone or computer as much as possible.</p>
+         <p>⁃	Curate their day slightly, focusing on their experience as a migrant, and any political issues that are personal to them.</p>
+      </div>
+   </section>
+
+   <section class="day">
+      <p>Filip, 24, Male, a Bosnian immigrant living in Maribor, Slovenia.</p>
+      <p>Streaming live in <span class="countdown"></span></p>
+   </section>
+   <section class="day">
+      <p>Lila, 48, Female, Egyptian living in Cairo.</p>
+      <p>Streaming live in <span class="countdown"></span></p>
+   </section>
+   <section class="day">
+      <p>Jalloh, 32, Male, Lebanese aslyum seeker, living in Gateshead, UK.</p>
+      <p>Streaming live in <span class="countdown"></span></p>
+   </section>
+
+   <section class="description">
+      <p>We will constantly be adding to this list, so please follow us on Twitter to get updates on new lives, or if you’re interested in recording your life.</p>
+   </section>
+
+   <section class="the-other-team">
+      <div>
+         <h6>European Media Arts Residency Exchange Team</h6>
+         <p><span class="bold">Mark Farid</span> Artist and Producer</p>
+         <p><span class="bold">Peter</span> Producer</p>
+         <p><span class="bold">Marcie</span> Producer</p>
+      </div>
+      <div>
+         <h6>Development of Commercially Bought Recorder</h6>
+         <p><span class="bold">Orange</span> Customisation of commercial pair of glasses/recorder.</p>
+      </div>
+      
+   </section>
+   
+   <footer>
+      <a href="/">Home</a>
+      <p>Sign-up to our newsletter</p>
+      <a href="">Email</a>
+      <a href="">Twitter</a>
+   </footer>
+</body>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+// Get today's date and time
+var now = new Date().getTime();
+
+// Find the distance between now and the count down date
+var distance = countDownDate - now;
+
+// Time calculations for days, hours, minutes and seconds
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+// Display the result in the element with id="demo"
+let countdownEls = document.querySelectorAll(".countdown");
+
+countdownEls.forEach(el => {
+   el.innerHTML = days + "d " + hours + "h "
+   + minutes + "m " + seconds + "s ";
+
+   if (distance < 0) {
+      clearInterval(x);
+      el.innerHTML = "EXPIRED";
+   }
+   }, 1000);
+});
+</script>
+
+</html>

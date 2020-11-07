@@ -11,6 +11,15 @@ h3 {
   padding: 20px;
 }
 
+h6 {
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: 700;
+}
+
 .button {
   color: #FFFFFF;
   padding: 7px;
@@ -206,6 +215,7 @@ footer {
   flex-direction: row;
   justify-content: flex-end;
   z-index: 2;
+  color: #0a5396;
 }
 footer > * {
   padding: 10px 20px 10px 0;
@@ -264,4 +274,76 @@ footer > * {
 }
 #the-other-cta.mini #drag svg {
   stroke-width: 17;
+}
+
+#ars {
+  color: #222222;
+}
+#ars .intro {
+  padding: 0;
+}
+#ars .intro h3 {
+  background-color: #222222;
+  color: #FFFFFF;
+  text-align: center;
+}
+#ars .intro p {
+  padding: 20px 60px;
+}
+#ars section {
+  padding: 20px 60px;
+}
+#ars .day:nth-child(even) {
+  background-color: #222222;
+  color: #FFFFFF;
+}
+
+#the-other {
+  color: #FF8C00;
+}
+#the-other .intro {
+  padding: 0;
+}
+#the-other .intro h3 {
+  background-color: #F99437;
+  color: #FFFFFF;
+  text-align: center;
+}
+#the-other .intro-top {
+  padding: 0 60px;
+  font-size: 26px;
+}
+#the-other .intro-top p {
+  padding-top: 30px;
+}
+#the-other .intro-bottom {
+  padding: 0 60px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+#the-other .intro-bottom :first-child {
+  width: 100%;
+  padding-top: 30px;
+}
+#the-other .intro-bottom :not(:first-child) {
+  width: 45%;
+  padding: 10px 0;
+}
+#the-other section {
+  padding: 20px 60px;
+}
+#the-other .day:nth-child(even) {
+  background-color: #F99437;
+  color: #FFFFFF;
+}
+#the-other .the-other-team {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#the-other .the-other-team div {
+  width: 45%;
 }

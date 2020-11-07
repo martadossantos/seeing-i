@@ -26,6 +26,15 @@ h3 {
    padding: $sm-pad;
 }
 
+h6 {
+   margin-bottom: 10px;
+   text-decoration: underline;
+}
+
+.bold {
+   font-weight: 700;
+}
+
 .button {
    color: $white;
    padding: 7px;
@@ -265,6 +274,7 @@ footer {
    flex-direction: row;
    justify-content: flex-end;
    z-index: 2;
+   color: $blue;
 
    > * {
       padding: 10px $sm-pad 10px 0;
@@ -334,3 +344,97 @@ footer {
    }
 }
  
+/// Ars Electronica
+
+#ars {
+   color: $black; 
+
+   .intro {
+      padding: 0;
+
+      h3 {
+         background-color: $black;
+         color: $white;
+         text-align: center;
+      }
+
+      p {
+         padding: $sm-pad $unit;
+      }
+   }
+
+   section {
+      padding: $sm-pad $unit;
+   }
+
+   .day:nth-child(even) {
+      background-color: $black;
+      color: $white;
+   }
+}
+
+
+/////
+/////
+// THE OTHER
+
+#the-other {
+   color: $txt-orange;
+
+   .intro {
+      padding: 0;
+
+      h3 {
+         background-color: $bg-orange;
+         color: $white;
+         text-align: center;
+      }
+   }
+
+   .intro-top {
+      padding: 0 $unit;
+      font-size: $md-text;
+
+      p {
+         padding-top: $half-unit;
+      }
+   }
+
+   .intro-bottom {
+      padding: 0 $unit;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: $half-unit;
+
+      :first-child {
+         width: 100%;
+         padding-top: $half-unit;
+      }
+
+      :not(:first-child) {
+         width: 45%;
+         padding: 10px 0;
+      }
+   }
+
+   section {
+      padding: $sm-pad $unit;
+   }
+
+   .day:nth-child(even) {
+      background-color: $bg-orange;
+      color: $white;
+   }
+
+   .the-other-team {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      div {
+         width: 45%;
+      }
+   }
+}
