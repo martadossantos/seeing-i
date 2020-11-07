@@ -1,0 +1,267 @@
+body {
+  max-width: 100vw;
+  line-height: 1.4;
+  color: #0a5396;
+  font-size: 20px;
+  padding-bottom: 60px;
+}
+
+h3 {
+  font-size: 26px;
+  padding: 20px;
+}
+
+.button {
+  color: #FFFFFF;
+  padding: 7px;
+}
+
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+}
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 70px);
+}
+
+.introduction {
+  padding: 60px;
+  font-size: 26px;
+}
+
+.the-other {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.the-other h3 {
+  background-color: #F99437;
+  color: #FFFFFF;
+}
+.the-other p {
+  color: #FF8C00;
+  padding: 20px 60px;
+}
+.the-other .button {
+  background-color: #F99437;
+}
+
+.ars-electronica {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.ars-electronica h3 {
+  background-color: #222222;
+  color: #FFFFFF;
+}
+.ars-electronica p {
+  color: #222222;
+  padding: 20px 60px;
+}
+.ars-electronica .button {
+  background-color: #222222;
+}
+
+.carousel-cell {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+.carousel-cell img {
+  display: block;
+  max-height: 100vh;
+}
+
+nav.concept {
+  border-top: 4px solid #0a5396;
+  border-bottom: 4px solid #0a5396;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+}
+
+.text-carousel .carousel-cell {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+.text-carousel .carousel-cell .mirror, .text-carousel .carousel-cell .not-mirror {
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+}
+.text-carousel .carousel-cell .mirror {
+  background-color: #0a5396;
+  color: #FFFFFF;
+  transform: scale(-1, 1);
+}
+
+.photos {
+  background-color: #0a5396;
+}
+.photos .flickity-button {
+  color: #FFFFFF !important;
+}
+.photos .left {
+  align-self: flex-start;
+}
+.photos .right {
+  align-self: flex-end;
+}
+
+.quotes-carousel {
+  text-align: center;
+}
+.quotes-carousel p {
+  max-width: 80vw;
+  padding-top: 30px;
+}
+.quotes-carousel p:last-child {
+  padding-bottom: 60px;
+}
+.quotes-carousel .quo-source {
+  padding-top: 30px;
+}
+.quotes-carousel .carousel-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.talks {
+  margin-bottom: 30px;
+}
+.talks .videos-container {
+  display: flex;
+  flex-direction: row;
+}
+.talks .videos-container .video-container {
+  width: 50%;
+}
+.talks .videos-container .video-container.left {
+  padding: 30px 30px 30px 60px;
+}
+.talks .videos-container .video-container.right {
+  padding: 30px 60px 30px 30px;
+}
+.talks .videos-container .video-container iframe {
+  height: 100%;
+}
+.talks h3 {
+  background-color: #0a5396;
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: -70px;
+}
+
+.team {
+  background-color: #0a5396;
+  color: #FFFFFF;
+}
+.team h3 {
+  background-color: #FFFFFF;
+  color: #0a5396;
+  text-align: center;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 60px 0 60px;
+}
+.team-container div {
+  width: 45%;
+  padding-bottom: 30px;
+}
+
+.logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.logos img {
+  max-width: 100px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #F4F4F4;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  z-index: 2;
+}
+footer > * {
+  padding: 10px 20px 10px 0;
+}
+
+#the-other-cta {
+  position: fixed;
+  z-index: 99;
+  text-align: center;
+  color: #FF8C00;
+  bottom: -10px;
+  left: -10px;
+  transition: all 1s ease;
+}
+#the-other-cta .close {
+  cursor: pointer;
+  position: absolute;
+  top: 21%;
+  right: 50px;
+}
+#the-other-cta .cta-more-info {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#the-other-cta .cta-more-info .button {
+  background-color: #F99437;
+  margin-top: 10px;
+  display: inline-block;
+  padding: 5px 7px;
+}
+#the-other-cta #drag {
+  padding: 10px;
+  z-index: 10;
+}
+#the-other-cta #drag svg {
+  stroke-width: 4;
+  stroke: #F99437;
+}
+
+#the-other-cta.mini {
+  transform: scale(0.2);
+}
+#the-other-cta.mini .close {
+  cursor: pointer;
+  transform: scale(6);
+  top: 44%;
+  right: 138px;
+}
+#the-other-cta.mini .cta-more-info {
+  display: none;
+}
+#the-other-cta.mini #drag svg {
+  stroke-width: 17;
+}
