@@ -3,7 +3,9 @@ body {
   line-height: 1.4;
   color: #0a5396;
   font-size: 20px;
-  padding-bottom: 60px;
+  padding-bottom: 100px;
+  font-family: "Peace";
+  text-rendering: geometricPrecision;
 }
 
 h3 {
@@ -16,13 +18,25 @@ h6 {
   text-decoration: underline;
 }
 
-.bold {
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.bold, .quotes-carousel .quo-source {
+  font-family: "Peace Bold";
   font-weight: 700;
 }
 
 .button {
   color: #FFFFFF;
   padding: 7px;
+  cursor: pointer;
+}
+
+.countdown {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" on;
 }
 
 .video {
@@ -40,8 +54,11 @@ h6 {
 }
 
 .introduction {
-  padding: 60px;
+  padding: 0 60px 60px 60px;
   font-size: 26px;
+}
+.introduction p {
+  padding-bottom: 20px;
 }
 
 .the-other {
@@ -105,12 +122,20 @@ nav.concept {
   justify-content: center;
   width: 100vw;
 }
+.text-carousel .carousel-cell h4 {
+  font-size: 26px;
+  padding-bottom: 20px;
+}
+.text-carousel .carousel-cell p {
+  padding-bottom: 20px;
+}
 .text-carousel .carousel-cell .mirror, .text-carousel .carousel-cell .not-mirror {
   display: flex;
   flex-direction: column;
   padding: 60px;
 }
 .text-carousel .carousel-cell .mirror {
+  font-family: "Peace Dotty";
   background-color: #0a5396;
   color: #FFFFFF;
   transform: scale(-1, 1);
@@ -154,6 +179,7 @@ nav.concept {
 .talks .videos-container {
   display: flex;
   flex-direction: row;
+  padding-top: 30px;
 }
 .talks .videos-container .video-container {
   width: 50%;
@@ -166,6 +192,9 @@ nav.concept {
 }
 .talks .videos-container .video-container iframe {
   height: 100%;
+}
+.talks .videos-container p {
+  padding: 20px 0 30px 0;
 }
 .talks h3 {
   background-color: #0a5396;
@@ -189,7 +218,7 @@ nav.concept {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  padding: 30px 60px 0 60px;
+  padding: 60px;
 }
 .team-container div {
   width: 45%;
@@ -200,10 +229,21 @@ nav.concept {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 20px;
+  align-items: center;
+  padding: 0 60px;
+  margin-top: 30px;
 }
-.logos img {
-  max-width: 100px;
+.logos .logo-container {
+  max-width: 110px;
+}
+.logos .logo-container img {
+  width: 100%;
+}
+.logos .logo-container.logo-small {
+  max-width: 75px;
+}
+.logos .logo-container.logo-big {
+  max-width: 130px;
 }
 
 footer {
@@ -214,11 +254,33 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
   z-index: 2;
   color: #0a5396;
 }
 footer > * {
   padding: 10px 20px 10px 0;
+}
+footer .d-none {
+  display: none;
+}
+footer form #mc_embed_signup_scroll {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer form #mce-EMAIL {
+  max-width: 180px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #0a5396;
+  color: #0a5396;
+}
+footer form input.button {
+  padding: 3px;
+  margin-left: 7px;
+  background-color: #0a5396;
+  border: none;
 }
 
 #the-other-cta {
@@ -239,7 +301,7 @@ footer > * {
 #the-other-cta .cta-more-info {
   position: absolute;
   top: 35%;
-  left: 20%;
+  left: 17%;
   text-align: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -281,11 +343,13 @@ footer > * {
 }
 #ars .intro {
   padding: 0;
+  margin-bottom: 30px;
 }
 #ars .intro h3 {
   background-color: #222222;
   color: #FFFFFF;
   text-align: center;
+  margin-bottom: 30px;
 }
 #ars .intro p {
   padding: 20px 60px;
@@ -297,26 +361,44 @@ footer > * {
   background-color: #222222;
   color: #FFFFFF;
 }
+#ars .description p {
+  margin: 30px 0;
+}
+#ars .description .ars-photos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#ars .description .ars-photos .image-container {
+  width: 45%;
+  padding-bottom: 30px;
+}
+#ars .description .ars-photos .image-container img {
+  width: 100%;
+  display: block;
+}
 
-#the-other {
+#the-other-page {
   color: #FF8C00;
 }
-#the-other .intro {
+#the-other-page .intro {
   padding: 0;
 }
-#the-other .intro h3 {
+#the-other-page .intro h3 {
   background-color: #F99437;
   color: #FFFFFF;
   text-align: center;
 }
-#the-other .intro-top {
+#the-other-page .intro-top {
   padding: 0 60px;
   font-size: 26px;
 }
-#the-other .intro-top p {
+#the-other-page .intro-top p {
   padding-top: 30px;
 }
-#the-other .intro-bottom {
+#the-other-page .intro-bottom {
   padding: 0 60px;
   display: flex;
   flex-direction: row;
@@ -324,26 +406,29 @@ footer > * {
   justify-content: space-between;
   margin-bottom: 30px;
 }
-#the-other .intro-bottom :first-child {
+#the-other-page .intro-bottom :first-child {
   width: 100%;
   padding-top: 30px;
 }
-#the-other .intro-bottom :not(:first-child) {
+#the-other-page .intro-bottom :not(:first-child) {
   width: 45%;
   padding: 10px 0;
 }
-#the-other section {
+#the-other-page section {
   padding: 20px 60px;
 }
-#the-other .day:nth-child(even) {
+#the-other-page .description p {
+  padding-top: 30px;
+}
+#the-other-page .day:nth-child(even) {
   background-color: #F99437;
   color: #FFFFFF;
 }
-#the-other .the-other-team {
+#the-other-page .the-other-team {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-#the-other .the-other-team div {
+#the-other-page .the-other-team div {
   width: 45%;
 }

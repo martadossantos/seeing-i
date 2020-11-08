@@ -41,6 +41,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
    friction: 0.8
    });
 
+   ///
+   ///
+   ///
+   /// NEWSLETTER
+   let newsButton = document.querySelector('#newsletter-action');
+   let newsForm = document.querySelector('#mc_embed_signup');
+
+   newsButton.addEventListener('click', () => {
+      newsButton.classList.add('d-none');
+      newsForm.classList.remove('d-none');
+   })
+
 
    ///
    ///

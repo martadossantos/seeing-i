@@ -1,10 +1,34 @@
 @font-face {
-    font-family: 'Name';
-    src: url('../assets/fonts/name.eot');
-    src: url('../assets/fonts/name.eot?#iefix') format('embedded-opentype'),
-        url('../assets/fonts/name.woff2') format('woff2'),
-        url('../assets/fonts/name.woff') format('woff'),
-        url('../assets/fonts/name.ttf') format('truetype');
+    font-family: 'Peace';
+    src: url('../assets/fonts/Peace-Medium.eot');
+    src: url('../assets/fonts/Peace-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Peace-Medium.woff2') format('woff2'),
+        url('../assets/fonts/Peace-Medium.woff') format('woff'),
+        url('../assets/fonts/Peace-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Peace Bold';
+    src: url('../assets/fonts/Peace-Bold.eot');
+    src: url('../assets/fonts/Peace-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Peace-Bold.woff2') format('woff2'),
+        url('../assets/fonts/Peace-Bold.woff') format('woff'),
+        url('../assets/fonts/Peace-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Peace Dotty';
+    src: url('../assets/fonts/PeaceDotty-Regular.eot');
+    src: url('../assets/fonts/PeaceDotty-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/PeaceDotty-Regular.woff2') format('woff2'),
+        url('../assets/fonts/PeaceDotty-Regular.woff') format('woff'),
+        url('../assets/fonts/PeaceDotty-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
