@@ -26,9 +26,7 @@ body {
 }
 
 main {
-   position: absolute;
-   top: 0;
-   z-index: -1;
+   margin-bottom: 100vh;
 }
 
 h3 {
@@ -64,14 +62,6 @@ a {
    font-feature-settings: 'tnum' on;
 }
 
-// img {
-//    max-width: 100%;
-//    max-height: 100%;
-//    object-fit: contain;
-//    height: auto;
-//    width: auto;
-// }
-
 .video {
    position: relative;
    padding-bottom: 56.25%; /* 16:9 */
@@ -94,6 +84,7 @@ a {
    right: 0;
    width: 100%;
    margin-bottom: 100vh;
+   z-index: 1;
 }
 
 .introduction {

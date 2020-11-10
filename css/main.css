@@ -9,9 +9,7 @@ body {
 }
 
 main {
-  position: absolute;
-  top: 0;
-  z-index: -1;
+  margin-bottom: 100vh;
 }
 
 h3 {
@@ -67,6 +65,7 @@ a {
   right: 0;
   width: 100%;
   margin-bottom: 100vh;
+  z-index: 1;
 }
 
 .introduction {

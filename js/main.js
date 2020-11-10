@@ -94,17 +94,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
    ///
    ///
    /// Video Fade
-   window.addEventListener('scroll', () => {
-      let distFromTop = window.pageYOffset;
+   const main = document.querySelector("main")
+   const section = document.querySelector(".main-container")
 
-      if (distFromTop < 800) {
-         let intro = document.querySelector('main');
-         intro.style.top = distFromTop + 'px';
+   const pos = function () {
+   const pixels = window.pageYOffset
+  
+   const maxScroll = window.innerHeight
+  
+   section.style.position = "fixed"
+   section.style.top = Math.min(maxScroll - pixels, 0) + "px"
+   section.style.zIndex = "0"
+  
+   main.style.height = (section.offsetHeight) + "px"
+}
 
-      }
-         
-      console.log(window.pageYOffset)
-   })
+pos()
+
+window.addEventListener("scroll", function () {
+  pos()
+})
 
 
    ///
