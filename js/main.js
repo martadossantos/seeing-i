@@ -90,6 +90,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }, 1000);
    });
 
+   
+   ///
+   ///
+   /// Video Fade
+   window.addEventListener('scroll', () => {
+      let distFromTop = window.pageYOffset;
+
+      if (distFromTop < 800) {
+         let intro = document.querySelector('main');
+         intro.style.top = distFromTop + 'px';
+
+      }
+         
+      console.log(window.pageYOffset)
+   })
+
+
    ///
    ///
    ///
