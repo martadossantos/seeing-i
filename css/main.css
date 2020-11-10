@@ -114,6 +114,15 @@ nav.concept {
   padding: 20px 60px;
 }
 
+nav.concept-mobile {
+  display: none;
+}
+
+.flickity-slider {
+  display: flex;
+  align-items: center;
+}
+
 .text-carousel .carousel-cell {
   display: flex;
   flex-wrap: nowrap;
@@ -165,9 +174,15 @@ nav.concept {
   padding-bottom: 60px;
 }
 .quotes-carousel .quo-source {
-  padding-top: 30px;
+  margin-top: 30px;
 }
 .quotes-carousel .carousel-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.quotes-carousel .carousel-cell .quote-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -228,10 +243,18 @@ nav.concept {
 .logos {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
   padding: 0 60px;
   margin-top: 30px;
+}
+.logos .main-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 .logos .logo-container {
   max-width: 110px;
@@ -243,7 +266,7 @@ nav.concept {
   max-width: 75px;
 }
 .logos .logo-container.logo-big {
-  max-width: 130px;
+  max-width: 140px;
 }
 
 footer {
@@ -257,6 +280,13 @@ footer {
   align-items: center;
   z-index: 2;
   color: #0a5396;
+}
+footer .footer-links {
+  display: flex;
+  flex-direction: row;
+}
+footer .footer-links > * {
+  padding-left: 10px;
 }
 footer > * {
   padding: 10px 20px 10px 0;
@@ -297,11 +327,13 @@ footer form input.button {
   position: absolute;
   top: 21%;
   right: 50px;
+  z-index: 10;
 }
 #the-other-cta .cta-more-info {
   position: absolute;
   top: 35%;
-  left: 17%;
+  left: 52%;
+  transform: translateX(-50%);
   text-align: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -315,7 +347,7 @@ footer form input.button {
 }
 #the-other-cta #drag {
   padding: 10px;
-  z-index: 10;
+  position: relative;
 }
 #the-other-cta #drag svg {
   stroke-width: 4;
@@ -328,7 +360,7 @@ footer form input.button {
 #the-other-cta.mini .close {
   cursor: pointer;
   transform: scale(6);
-  top: 44%;
+  top: 47%;
   right: 138px;
 }
 #the-other-cta.mini .cta-more-info {
@@ -434,4 +466,151 @@ footer form input.button {
 }
 #the-other-page .the-other-team div {
   width: 45%;
+}
+
+@media (max-width: 800px) {
+  nav.concept-desktop {
+    display: none;
+  }
+
+  nav.concept-mobile {
+    display: flex;
+  }
+}
+@media (max-width: 700px) {
+  body {
+    font-size: 16px;
+  }
+
+  .logos {
+    padding: 0 30px;
+  }
+
+  h3,
+.introduction,
+.text-carousel .carousel-cell h4,
+#the-other-page .intro-top {
+    font-size: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .text-carousel .carousel-cell .mirror {
+    display: none;
+  }
+
+  .introduction {
+    padding: 0 30px 30px 30px;
+  }
+
+  .the-other p,
+nav.concept,
+.ars-electronica p {
+    padding: 20px 30px;
+  }
+
+  .text-carousel .carousel-cell .not-mirror,
+.team-container {
+    padding: 30px;
+  }
+
+  .talks .videos-container {
+    flex-direction: column;
+  }
+  .talks .videos-container .video-container {
+    width: 100%;
+  }
+  .talks .videos-container .video-container.right, .talks .videos-container .video-container.left {
+    padding: 0;
+  }
+  .talks .videos-container p {
+    padding: 20px 30px 30px 30px;
+  }
+
+  .team-container {
+    flex-direction: column;
+  }
+  .team-container div {
+    width: 100%;
+  }
+
+  .logos .logo-container {
+    max-width: 80px;
+  }
+  .logos .logo-container.logo-small {
+    max-width: 55px;
+  }
+  .logos .logo-container.logo-big {
+    max-width: 100px;
+  }
+
+  #the-other-cta {
+    display: none;
+  }
+
+  #the-other-page .intro-top {
+    padding: 0 30px;
+  }
+  #the-other-page .intro-bottom {
+    padding: 0 30px;
+  }
+  #the-other-page .intro-bottom :not(:first-child) {
+    width: 100%;
+  }
+  #the-other-page section {
+    padding: 20px 30px;
+  }
+  #the-other-page .the-other-team {
+    flex-direction: column;
+  }
+  #the-other-page .the-other-team div {
+    width: 100%;
+  }
+  #the-other-page .the-other-team div:first-child {
+    padding-bottom: 20px;
+  }
+
+  #ars .intro p {
+    padding: 20px 30px;
+  }
+  #ars section {
+    padding: 20px 30px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-end;
+    padding-bottom: 10px;
+  }
+  footer > * {
+    padding: 10px 20px 0 0;
+  }
+  footer form #mc_embed_signup_scroll {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  footer form #mce-EMAIL {
+    max-width: 180px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #0a5396;
+    color: #0a5396;
+  }
+  footer form input.button {
+    padding: 3px;
+    margin-left: 7px;
+    background-color: #0a5396;
+    border: none;
+  }
+}
+@media (max-width: 400px) {
+  .logos .logo-container {
+    max-width: 70px;
+  }
+  .logos .logo-container.logo-small {
+    max-width: 50px;
+  }
+  .logos .logo-container.logo-big {
+    max-width: 80px;
+  }
 }

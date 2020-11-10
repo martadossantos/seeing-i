@@ -9,6 +9,8 @@ $sm-text: 20px;
 $md-text: 26px;
 $headline: 42px;
 
+$mobile-md-text: 20px;
+$mobile-sm-text: 16px;
 $unit: 60px;
 $half-unit: 30px;
 $sm-pad: 20px;
@@ -156,6 +158,15 @@ nav.concept {
    // }
 }
 
+nav.concept-mobile {
+   display: none;
+}
+
+.flickity-slider {
+   display: flex;
+   align-items: center;
+}
+
 .text-carousel .carousel-cell {
    display: flex;
    flex-wrap: nowrap;
@@ -220,14 +231,21 @@ nav.concept {
    }
 
    .quo-source {
-      padding-top: $half-unit;
+      margin-top: $half-unit;
       @extend .bold;
    }
 
    .carousel-cell {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: center;
+      align-items: center;
+
+      .quote-container {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-around;
+      }
    }
    
 }
@@ -293,10 +311,19 @@ nav.concept {
 .logos {
    display: flex;
    flex-direction: row;
-   justify-content: space-between;
+   flex-wrap: wrap;
+   justify-content: space-around;
    align-items: center;
    padding: 0 $unit;
    margin-top: $half-unit;
+
+   .main-logos {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+   }
 
    .logo-container {
       max-width: 110px;
@@ -311,7 +338,7 @@ nav.concept {
    }
 
    .logo-container.logo-big {
-      max-width: 130px;
+      max-width: 140px;
    }
 
 }
@@ -327,6 +354,15 @@ footer {
    align-items: center;
    z-index: 2;
    color: $blue;
+
+   .footer-links {
+      display: flex;
+      flex-direction: row;
+
+      > * {
+         padding-left: 10px;
+      }
+   }
 
    > * {
       padding: 10px $sm-pad 10px 0;
@@ -374,12 +410,14 @@ footer {
       position: absolute;
       top: 21%;
       right: 50px;
+      z-index: 10;
    }
 
    .cta-more-info {
       position: absolute;
       top: 35%;
-      left: 17%;
+      left: 52%;
+      transform: translateX(-50%);
       text-align: center;
       width: fit-content;
 
@@ -394,7 +432,7 @@ footer {
 
    #drag {
       padding: 10px;
-      z-index: 10;
+      position: relative;
    
       svg {
          stroke-width: 4;
@@ -409,7 +447,7 @@ footer {
    .close {
       cursor: pointer;
       transform: scale(6);
-      top: 44%;
+      top: 47%;
       right: 138px;
    }
 
@@ -548,6 +586,195 @@ footer {
 
       div {
          width: 45%;
+      }
+   }
+}
+
+@media (max-width: 800px) {
+
+   nav.concept-desktop {
+      display: none;
+   }
+
+   nav.concept-mobile {
+      display: flex;
+   }
+
+}
+
+@media (max-width: 700px) {
+
+   body {
+      font-size: $mobile-sm-text;
+   }
+
+   .logos {
+      padding: 0 $half-unit;
+   }
+
+   h3,
+   .introduction,
+   .text-carousel .carousel-cell h4,
+   #the-other-page .intro-top {
+      font-size: $mobile-md-text;
+   }
+
+}
+
+@media (max-width: 500px) {
+
+   .text-carousel .carousel-cell .mirror {
+      display: none;
+   }
+
+   .introduction {
+      padding: 0 $half-unit $half-unit $half-unit;
+   }
+
+   .the-other p,
+   nav.concept,
+   .ars-electronica p {
+      padding: $sm-pad $half-unit;
+   }
+
+   .text-carousel .carousel-cell .not-mirror,
+   .team-container {
+      padding: $half-unit;
+   }
+
+   .talks .videos-container {
+      flex-direction: column;
+
+      .video-container {
+         width: 100%;
+
+         &.right,
+         &.left {
+            padding: 0;
+         }
+      }
+
+      p {
+         padding: $sm-pad $half-unit $half-unit $half-unit;
+      }
+   }
+
+   .team-container {
+      flex-direction: column;
+
+      div {
+         width: 100%;
+      }
+   }
+
+   .logos {
+      .logo-container {
+         max-width: 80px;
+      }
+   
+      .logo-container.logo-small {
+         max-width: 55px;
+      }
+   
+      .logo-container.logo-big {
+         max-width: 100px;
+      }
+   }
+
+   #the-other-cta {
+      display: none;
+   }
+
+   #the-other-page {
+      .intro-top {
+         padding: 0 $half-unit;
+      }
+   
+      .intro-bottom {
+         padding: 0 $half-unit;
+   
+         :not(:first-child) {
+            width: 100%;
+         }
+      }
+   
+      section {
+         padding: $sm-pad $half-unit;
+      }
+   
+      .the-other-team {
+         flex-direction: column;
+   
+         div {
+            width: 100%;
+         }
+
+         div:first-child {
+            padding-bottom: $sm-pad;
+         }
+      }
+   }
+
+   #ars {
+      .intro {     
+         p {
+            padding: $sm-pad $half-unit;
+         }
+      }
+   
+      section {
+         padding: $sm-pad $half-unit;
+      }
+   
+   }
+
+   footer {
+      flex-direction: column;
+      align-items: flex-end;
+      padding-bottom: 10px;
+   
+      > * {
+         padding: 10px $sm-pad 0 0;
+      }
+   
+      form {
+         #mc_embed_signup_scroll {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+         }
+   
+         #mce-EMAIL {
+            max-width: 180px;
+            border: none;
+            background-color: transparent;
+            border-bottom: 2px solid $blue;
+            color: $blue;
+         }
+   
+         input.button {
+            padding: 3px;
+            margin-left: 7px;
+            background-color: $blue;
+            border: none;
+         }
+      }
+   }
+
+}
+
+@media (max-width: 400px) {
+   .logos {
+      .logo-container {
+         max-width: 70px;
+      }
+   
+      .logo-container.logo-small {
+         max-width: 50px;
+      }
+   
+      .logo-container.logo-big {
+         max-width: 80px;
       }
    }
 }
