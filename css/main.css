@@ -3,7 +3,6 @@ body {
   line-height: 1.4;
   color: #0a5396;
   font-size: 20px;
-  padding-bottom: 100px;
   font-family: "Peace";
   text-rendering: geometricPrecision;
 }
@@ -54,7 +53,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% - 70px);
+  height: 100%;
 }
 
 .intro-video {
@@ -65,20 +64,26 @@ a {
   right: 0;
   width: 100%;
   margin-bottom: 100vh;
-  z-index: 1;
+  z-index: 4;
+}
+.intro-video iframe {
+  height: 100vh;
 }
 
 .introduction {
-  padding: 60px;
+  padding: 120px 120px 60px 120px;
   font-size: 26px;
 }
 .introduction p {
   padding-bottom: 20px;
 }
+.introduction .small-text {
+  font-size: 20px;
+}
 
 .the-other {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
 }
 .the-other h3 {
   background-color: #F99437;
@@ -86,7 +91,10 @@ a {
 }
 .the-other p {
   color: #FF8C00;
-  padding: 20px 60px;
+  padding: 60px;
+}
+.the-other .learn-more {
+  padding: 0;
 }
 .the-other .button {
   background-color: #F99437;
@@ -94,7 +102,7 @@ a {
 
 .ars-electronica {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
 }
 .ars-electronica h3 {
   background-color: #222222;
@@ -102,7 +110,10 @@ a {
 }
 .ars-electronica p {
   color: #222222;
-  padding: 20px 60px;
+  padding: 60px;
+}
+.ars-electronica .learn-more {
+  padding: 0;
 }
 .ars-electronica .button {
   background-color: #222222;
@@ -126,7 +137,7 @@ nav.concept {
   border-bottom: 4px solid #0a5396;
   display: flex;
   justify-content: space-between;
-  padding: 20px 60px;
+  padding: 10px 60px;
 }
 
 nav.concept-mobile {
@@ -145,6 +156,7 @@ nav.concept-mobile {
   align-items: center;
   justify-content: center;
   width: 100vw;
+  text-align: center;
 }
 .text-carousel .carousel-cell h4 {
   font-size: 26px;
@@ -178,6 +190,12 @@ nav.concept-mobile {
   align-self: flex-end;
 }
 
+.quotes h3 {
+  background-color: #0a5396;
+  text-align: center;
+  color: #FFFFFF;
+}
+
 .quotes-carousel {
   text-align: center;
 }
@@ -190,6 +208,7 @@ nav.concept-mobile {
 }
 .quotes-carousel .quo-source {
   margin-top: 30px;
+  font-size: 26px;
 }
 .quotes-carousel .carousel-cell {
   display: flex;
@@ -204,7 +223,9 @@ nav.concept-mobile {
 }
 
 .talks {
-  margin-bottom: 30px;
+  background-color: #0a5396;
+  color: #FFFFFF;
+  padding-bottom: 60px;
 }
 .talks .videos-container {
   display: flex;
@@ -215,31 +236,24 @@ nav.concept-mobile {
   width: 50%;
 }
 .talks .videos-container .video-container.left {
-  padding: 30px 30px 30px 60px;
+  padding: 30px 30px 0 60px;
 }
 .talks .videos-container .video-container.right {
-  padding: 30px 60px 30px 30px;
+  padding: 30px 60px 0 30px;
 }
 .talks .videos-container .video-container iframe {
   height: 100%;
 }
 .talks .videos-container p {
-  padding: 20px 0 30px 0;
+  padding: 20px 0 0 0;
 }
 .talks h3 {
   background-color: #0a5396;
   color: #FFFFFF;
   text-align: center;
-  margin-top: -70px;
 }
 
-.team {
-  background-color: #0a5396;
-  color: #FFFFFF;
-}
 .team h3 {
-  background-color: #FFFFFF;
-  color: #0a5396;
   text-align: center;
 }
 
@@ -263,6 +277,7 @@ nav.concept-mobile {
   align-items: center;
   padding: 0 60px;
   margin-top: 30px;
+  margin-bottom: 60px;
 }
 .logos .main-logos {
   display: flex;
@@ -281,12 +296,10 @@ nav.concept-mobile {
   max-width: 75px;
 }
 .logos .logo-container.logo-big {
-  max-width: 140px;
+  max-width: 180px;
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
   background-color: #F4F4F4;
   width: 100%;
   display: flex;
@@ -301,13 +314,16 @@ footer .footer-links {
   flex-direction: row;
 }
 footer .footer-links > * {
-  padding-left: 10px;
+  padding-left: 30px;
 }
 footer > * {
   padding: 10px 20px 10px 0;
 }
 footer .d-none {
   display: none;
+}
+footer #newsletter-action {
+  padding: 0;
 }
 footer form #mc_embed_signup_scroll {
   display: flex;
@@ -330,24 +346,24 @@ footer form input.button {
 
 #the-other-cta {
   position: fixed;
-  z-index: 99;
+  z-index: 3;
   text-align: center;
   color: #FF8C00;
-  bottom: -10px;
-  left: -10px;
+  bottom: 10px;
+  left: 10px;
   transition: all 1s ease;
 }
 #the-other-cta .close {
   cursor: pointer;
   position: absolute;
-  top: 21%;
-  right: 50px;
+  top: 10%;
+  right: 28px;
   z-index: 10;
 }
 #the-other-cta .cta-more-info {
   position: absolute;
-  top: 35%;
-  left: 52%;
+  top: 19%;
+  left: 50%;
   transform: translateX(-50%);
   text-align: center;
   width: -webkit-fit-content;
@@ -365,8 +381,10 @@ footer form input.button {
   position: relative;
 }
 #the-other-cta #drag svg {
-  stroke-width: 4;
+  stroke-width: 20px;
   stroke: #F99437;
+  width: 250px;
+  fill: #FFFFFF;
 }
 
 #the-other-cta.mini {
@@ -375,14 +393,14 @@ footer form input.button {
 #the-other-cta.mini .close {
   cursor: pointer;
   transform: scale(6);
-  top: 47%;
-  right: 138px;
+  top: 41%;
+  right: 129px;
 }
 #the-other-cta.mini .cta-more-info {
   display: none;
 }
 #the-other-cta.mini #drag svg {
-  stroke-width: 17;
+  stroke-width: 40px;
 }
 
 #ars {
@@ -393,7 +411,7 @@ footer form input.button {
 }
 #ars .intro {
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 #ars .intro h3 {
   background-color: #222222;
@@ -402,32 +420,43 @@ footer form input.button {
   margin-bottom: 30px;
 }
 #ars .intro p {
-  padding: 20px 60px;
+  padding: 30px 60px 0 60px;
 }
 #ars section {
   padding: 20px 60px;
 }
-#ars .day:nth-child(even) {
+#ars .day:nth-child(odd) {
   background-color: #222222;
   color: #FFFFFF;
 }
+#ars .day .video {
+  margin-bottom: 60px;
+}
+#ars .day-intro {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+#ars .description {
+  padding: 0;
+}
 #ars .description p {
-  margin: 30px 0;
+  margin: 30px 60px 60px 60px;
 }
 #ars .description .ars-photos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #222222;
 }
-#ars .description .ars-photos .image-container {
-  width: 45%;
-  padding-bottom: 30px;
+#ars .description .ars-photos .flickity-button {
+  color: #FFFFFF !important;
+}
+#ars .description .ars-photos .left {
+  align-self: flex-start;
+}
+#ars .description .ars-photos .right {
+  align-self: flex-end;
 }
 #ars .description .ars-photos .image-container img {
-  width: 100%;
   display: block;
+  max-height: 100vh;
 }
 
 #the-other-page {
@@ -440,6 +469,7 @@ footer form input.button {
   background-color: #F99437;
   color: #FFFFFF;
   text-align: center;
+  padding: 20px 60px;
 }
 #the-other-page .intro-top {
   padding: 0 60px;
@@ -507,6 +537,14 @@ footer form input.button {
 #the-other-page .intro-top {
     font-size: 20px;
   }
+
+  .quotes-carousel .quo-source {
+    font-size: 20px;
+  }
+
+  .introduction .small-text {
+    font-size: 20px;
+  }
 }
 @media (max-width: 500px) {
   .text-carousel .carousel-cell .mirror {
@@ -528,6 +566,10 @@ nav.concept,
     padding: 30px;
   }
 
+  .talks {
+    padding-bottom: 30px;
+  }
+
   .talks .videos-container {
     flex-direction: column;
   }
@@ -538,7 +580,7 @@ nav.concept,
     padding: 0;
   }
   .talks .videos-container p {
-    padding: 20px 30px 30px 30px;
+    padding: 20px 30px 0 30px;
   }
 
   .team-container {

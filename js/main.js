@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
    hash: true,
    prevNextButtons: false,
    selectedAttraction: 0.2,
-   friction: 0.8
+   friction: 0.8,
+   draggable: false
    });
 
    var quoCar = document.querySelector('.quotes-carousel');
@@ -24,7 +25,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
    pageDots: false,
    arrowShape: 'M14 50L86 99L86 0.999997L14 50Z',
    selectedAttraction: 0.2,
-   friction: 0.8
+   friction: 0.8,
+   draggable: false
    });
 
    var photosCar = document.querySelector('.photos-carousel');
@@ -59,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
    /// DATES
 
       // Set the date we're counting down to
-   var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+   var countDownDate = new Date("Dec 4, 2020 09:00:00").getTime();
 
    // Update the count down every 1 second
    var x = setInterval(function() {

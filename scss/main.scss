@@ -20,7 +20,6 @@ body {
    line-height: 1.4;
    color: $blue;
    font-size: $sm-text;
-   padding-bottom: 100px;
    font-family: 'Peace';
    text-rendering: geometricPrecision;
 }
@@ -72,7 +71,7 @@ a {
       top: 0;
       left: 0;
       width: 100%;
-      height: calc(100% - 70px);
+      height: 100%;
    }
 }
 
@@ -84,21 +83,29 @@ a {
    right: 0;
    width: 100%;
    margin-bottom: 100vh;
-   z-index: 1;
+   z-index: 4;
+
+   iframe {
+      height: 100vh;
+   }
 }
 
 .introduction {
-   padding: $unit;
+   padding: ($unit * 2) ($unit * 2) $unit ($unit * 2);
    font-size: $md-text;
 
    p {
       padding-bottom: $sm-pad;
    }
+
+   .small-text {
+      font-size: $sm-text;
+   }
 }
 
 .the-other {
    text-align: center;
-   padding-bottom: $half-unit;
+   padding-bottom: $unit;
 
    h3 {
       background-color: $bg-orange;
@@ -107,7 +114,11 @@ a {
 
    p {
       color: $txt-orange;
-      padding: $sm-pad $unit;
+      padding: $unit;
+   }
+
+   .learn-more {
+      padding: 0;
    }
 
    .button {
@@ -117,7 +128,7 @@ a {
 
 .ars-electronica {
    text-align: center;
-   padding-bottom: $half-unit;
+   padding-bottom: $unit;
 
    h3 {
       background-color: $black;
@@ -126,7 +137,11 @@ a {
 
    p {
       color: $black;
-      padding: $sm-pad $unit;
+      padding: $unit;
+   }
+
+   .learn-more {
+      padding: 0;
    }
 
    .button {
@@ -158,7 +173,7 @@ nav.concept {
    border-bottom: 4px solid $blue;
    display: flex;
    justify-content: space-between;
-   padding: $sm-pad $unit;
+   padding: 10px $unit;
 
    // a {
    //    padding: 0 $sm-pad;
@@ -181,6 +196,7 @@ nav.concept-mobile {
    align-items: center;
    justify-content: center;
    width: 100vw;
+   text-align: center;
 
    h4 {
       font-size: $md-text;
@@ -225,6 +241,12 @@ nav.concept-mobile {
    }
 }
 
+.quotes h3 {
+   background-color: $blue;
+   text-align: center;
+   color: $white;
+}
+
 .quotes-carousel {
    text-align: center;
 
@@ -240,6 +262,7 @@ nav.concept-mobile {
    .quo-source {
       margin-top: $half-unit;
       @extend .bold;
+      font-size: $md-text;
    }
 
    .carousel-cell {
@@ -258,7 +281,9 @@ nav.concept-mobile {
 }
 
 .talks {
-   margin-bottom: $half-unit;
+   background-color: $blue;
+   color: $white;
+   padding-bottom: $unit;
 
    .videos-container {
       display: flex;
@@ -268,9 +293,9 @@ nav.concept-mobile {
       .video-container {
          width: 50%;
 
-         &.left { padding: $half-unit $half-unit $half-unit $unit; }
+         &.left { padding: $half-unit $half-unit 0 $unit; }
 
-         &.right { padding: $half-unit $unit $half-unit $half-unit; }
+         &.right { padding: $half-unit $unit 0 $half-unit; }
 
          iframe {
             height: 100%;
@@ -278,7 +303,7 @@ nav.concept-mobile {
       }
 
       p {
-         padding: $sm-pad 0 $half-unit 0;
+         padding: $sm-pad 0 0 0;
       }
    }
 
@@ -286,19 +311,11 @@ nav.concept-mobile {
       background-color: $blue;
       color: $white;
       text-align: center;
-      margin-top: -70px;
    }
 }
 
-.team {
-   background-color: $blue;
-   color: $white;
-
-   h3 {
-      background-color: $white;
-      color: $blue;
-      text-align: center;
-   }
+.team h3 {
+   text-align: center;
 }
 
 .team-container {
@@ -323,6 +340,7 @@ nav.concept-mobile {
    align-items: center;
    padding: 0 $unit;
    margin-top: $half-unit;
+   margin-bottom: $unit;
 
    .main-logos {
       display: flex;
@@ -345,14 +363,12 @@ nav.concept-mobile {
    }
 
    .logo-container.logo-big {
-      max-width: 140px;
+      max-width: 180px;
    }
 
 }
 
 footer {
-   position: fixed;
-   bottom: 0;
    background-color: $grey;
    width: 100%;
    display: flex;
@@ -367,7 +383,7 @@ footer {
       flex-direction: row;
 
       > * {
-         padding-left: 10px;
+         padding-left: 30px;
       }
    }
 
@@ -377,6 +393,10 @@ footer {
 
    .d-none {
       display: none;
+   }
+
+   #newsletter-action {
+      padding: 0;
    }
 
    form {
@@ -405,25 +425,25 @@ footer {
 
 #the-other-cta {
    position: fixed;
-   z-index: 99;
+   z-index: 3;
    text-align: center;
    color: $txt-orange;
-   bottom: -10px;
-   left: -10px;
+   bottom: 10px;
+   left: 10px;
    transition: all 1s ease;
 
    .close {
       cursor: pointer;
       position: absolute;
-      top: 21%;
-      right: 50px;
+      top: 10%;
+      right: 28px;
       z-index: 10;
    }
 
    .cta-more-info {
       position: absolute;
-      top: 35%;
-      left: 52%;
+      top: 19%;
+      left: 50%;
       transform: translateX(-50%);
       text-align: center;
       width: fit-content;
@@ -442,8 +462,10 @@ footer {
       position: relative;
    
       svg {
-         stroke-width: 4;
+         stroke-width: 20px;
          stroke: $bg-orange;
+         width: 250px;
+         fill: $white;
       }
    }
 }
@@ -454,8 +476,8 @@ footer {
    .close {
       cursor: pointer;
       transform: scale(6);
-      top: 47%;
-      right: 138px;
+      top: 41%;
+      right: 129px;
    }
 
    .cta-more-info {
@@ -464,7 +486,7 @@ footer {
 
    #drag {
       svg {
-         stroke-width: 17;
+         stroke-width: 40px;
       }
    }
 }
@@ -480,7 +502,7 @@ footer {
 
    .intro {
       padding: 0;
-      margin-bottom: $half-unit;
+      margin-bottom: $unit;
 
       h3 {
          background-color: $black;
@@ -490,7 +512,7 @@ footer {
       }
 
       p {
-         padding: $sm-pad $unit;
+         padding: $half-unit $unit 0 $unit;
       }
    }
 
@@ -498,29 +520,54 @@ footer {
       padding: $sm-pad $unit;
    }
 
-   .day:nth-child(even) {
+   .day:nth-child(odd) {
       background-color: $black;
       color: $white;
    }
 
+   .day .video {
+      margin-bottom: $unit;
+   }
+
+   .day-intro {
+      padding-top: $unit;
+      padding-bottom: $unit;
+   }
+
    .description {
+      padding: 0;
+
       p {
-         margin: $half-unit 0;
+         margin: $half-unit $unit $unit $unit;
       }
       .ars-photos {
-         display: flex;
-         flex-direction: row;
-         flex-wrap: wrap;
-         justify-content: space-between;
-         align-items: center;
+         background-color: $black;
+
+         .flickity-button {
+            color: $white !important;
+         }
+
+         .left {
+            align-self: flex-start;
+         }
+      
+         .right {
+            align-self: flex-end;
+         }
+         
+         // display: flex;
+         // flex-direction: row;
+         // flex-wrap: wrap;
+         // justify-content: space-between;
+         // align-items: center;
 
          .image-container {
-            width: 45%;
-            padding-bottom: $half-unit;
+            // width: 45%;
+            // padding-bottom: $half-unit;
 
             img {
-               width: 100%;
                display: block;
+               max-height: 100vh;
             }
          }
       }
@@ -542,6 +589,7 @@ footer {
          background-color: $bg-orange;
          color: $white;
          text-align: center;
+         padding: $sm-pad $unit;
       }
    }
 
@@ -626,6 +674,14 @@ footer {
       font-size: $mobile-md-text;
    }
 
+   .quotes-carousel .quo-source {
+      font-size: $mobile-md-text;
+   }
+
+   .introduction .small-text {
+      font-size: $sm-text;
+   }
+
 }
 
 @media (max-width: 500px) {
@@ -649,6 +705,10 @@ footer {
       padding: $half-unit;
    }
 
+   .talks {
+      padding-bottom: $half-unit;
+   }
+
    .talks .videos-container {
       flex-direction: column;
 
@@ -662,7 +722,7 @@ footer {
       }
 
       p {
-         padding: $sm-pad $half-unit $half-unit $half-unit;
+         padding: $sm-pad $half-unit 0 $half-unit;
       }
    }
 

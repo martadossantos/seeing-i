@@ -13,6 +13,44 @@
    <section class="intro">
       <h3>Seeing I: Pilot, at Ars Electronica Digital Arts Festival, 2nd - 8th September 2019</h3>
       <p>Culminating a residency at Ars Electronica Digital Arts Festival; for seven consecutive days, artist Mark Farid wore a VR headset for nine continuous hours each day, subject to the sights and sounds of a different person each day.</p>
+      <p>Each day, Farid watched the first person point-of-view perspective of a person, for 9 continuous hours, watching them commute, eat and socialise, Farid was free to do as he pleased within the gallery space, so long as the headset remained on.</p>
+      <p>At the end of each day when Farid took off the VR headset, he spoke to Clinical Psychologist Dr. Tamara Russell about what he found difficult, engaging, and immersive. On the final night of the exhibition, a public conversation between Farid and Dr. Russell took place in the gallery space.</p>
+   </section>
+   <section class="description">
+
+      <div class="ars-photos">
+         <div class="hass-carousel">
+            <div class="image-container carousel-cell">
+               <img src="/assets/images/003-Untitled-CloseUp.png" alt="" class="left">
+            </div>
+            <div class="image-container carousel-cell">
+               <img src="/assets/images/004-Untitled-Eating.png" alt="">
+            </div>
+            <div class="image-container carousel-cell">
+               <img src="/assets/images/005-Untitled-Relaxing.png" alt="">
+            </div>
+            <div class="image-container carousel-cell">
+               <img src="/assets/images/006-Untitled-Sleeping.png" alt="" class="left">
+            </div>
+            <div class="image-container carousel-cell">
+               <img src="/assets/images/007-Untitled-Standing.png" alt="" class="right">
+            </div>
+            <div class="image-container carousel-cell">
+               <img src="/assets/images/008-Untitled-Triple-Exposure.png" alt="">
+            </div>
+            <div class="image-container carousel-cell">
+               <img src="/assets/images/009-Untitled-Triple-Exposure.png" alt="">
+            </div>
+            <div class="image-container carousel-cell">
+               <img src="/assets/images/010-Untitled-Walking.png" alt="" class="right">
+            </div>
+         </div>
+      
+      </div>
+      <p>All photographs were taken with a Hasselblad Medium Format Camera. Each is an edition of 5.</p>
+   </section>
+
+   <section class="day day-intro">
       <p>This 7-day, public trial-run was used to test the pre-production required to do this project. We also used this exhibition to trial a range of different ages, genders, and characteristics of different Other’s.</p>
    </section>
    <section class="day">
@@ -53,43 +91,6 @@
          <iframe width="1280" height="529" src="https://www.youtube.com/embed/kmzmszvjO24" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
    </section>
-   <section class="description">
-      <p>Each day, Farid watched the first person point-of-view perspective of a person, for 9 continuous hours, watching them commute, eat and socialise, Farid was free to do as he pleased within the gallery space, so long as the headset remained on.</p>
-      <div class="ars-photos">
-         <div class="image-container">
-            <img src="/assets/images/001-Untitled-Relaxing.png" alt="">
-         </div>
-         <div class="image-container">
-            <img src="/assets/images/002-Untitled-Sleeping.png" alt="">
-         </div>
-         <div class="image-container">
-            <img src="/assets/images/003-Untitled-CloseUp.png" alt="">
-         </div>
-         <div class="image-container">
-            <img src="/assets/images/004-Untitled-Eating.png" alt="">
-         </div>
-         <div class="image-container">
-            <img src="/assets/images/005-Untitled-Relaxing.png" alt="">
-         </div>
-         <div class="image-container">
-            <img src="/assets/images/006-Untitled-Sleeping.png" alt="">
-         </div>
-         <div class="image-container">
-            <img src="/assets/images/007-Untitled-Standing.png" alt="">
-         </div>
-         <div class="image-container">
-            <img src="/assets/images/008-Untitled-Triple-Exposure.png" alt="">
-         </div>
-         <div class="image-container">
-            <img src="/assets/images/009-Untitled-Triple-Exposure.png" alt="">
-         </div>
-         <div class="image-container">
-            <img src="/assets/images/010-Untitled-Walking.png" alt="">
-         </div>
-
-      </div>
-      <p>At the end of each day when Farid took off the VR headset, he spoke to Clinical Psychologist Dr. Tamara Russell about what he found difficult, engaging, and immersive. On the final night of the exhibition, a public conversation between Farid and Dr. Russell took place in the gallery space.</p>
-   </section>
 
    <section class="team-container">
       <div class="ars-team">
@@ -111,7 +112,8 @@
    </section>
 
    <footer>
-      <div id="newsletter-action">Sign-up to the Seeing I newsletter</div>
+      <a href="/">Home</a>
+      <div id="newsletter-action">Newsletter</div>
       <!-- Begin Mailchimp Signup Form -->
       <div id="mc_embed_signup" class="d-none">
          <form action="https://markfarid.us2.list-manage.com/subscribe/post?u=e842aa598167562b1aae09f83&amp;id=0bafbf051e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -139,7 +141,26 @@
 
    </footer>
 
+
+   <script src="/js/flickity.pkgd.min.js"></script>
    <script>
+      /// SLIDE
+      document.addEventListener("DOMContentLoaded", function(event) {
+         let hassCar = document.querySelector('.hass-carousel');
+         var flkty = new Flickity( hassCar, {
+         // options
+         cellAlign: 'left',
+         contain: true,
+         wrapAround: true,
+         imagesLoaded: true,
+         pageDots: false,
+         arrowShape: 'M14 50L86 99L86 0.999997L14 50Z',
+         adaptiveHeight: true,
+         selectedAttraction: 0.2,
+         friction: 0.8
+         });
+      })
+
       /// NEWSLETTER
    let newsButton = document.querySelector('#newsletter-action');
    let newsForm = document.querySelector('#mc_embed_signup');
