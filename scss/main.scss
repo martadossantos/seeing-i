@@ -31,6 +31,7 @@ main {
 h3 {
    font-size: $md-text;
    padding: $sm-pad;
+   text-align: center;
 }
 
 h6 {
@@ -41,6 +42,11 @@ h6 {
 a {
    text-decoration: none;
    color: inherit;
+}
+
+#the-other-cta.invisible {
+   opacity: 0;
+   transition: opacity 2s ease;
 }
 
 .bold {
@@ -91,7 +97,7 @@ a {
 }
 
 .introduction {
-   padding: ($unit * 2) ($unit * 2) $unit ($unit * 2);
+   padding: ($unit * 1.5) ($unit * 1.5) $unit ($unit * 1.5);
    font-size: $md-text;
 
    p {
@@ -119,6 +125,11 @@ a {
 
    .learn-more {
       padding: 0;
+   }
+
+   .the-other-stream {
+      padding-bottom: $sm-pad;
+      font-size: $md-text;
    }
 
    .button {
@@ -174,6 +185,7 @@ nav.concept {
    display: flex;
    justify-content: space-between;
    padding: 10px $unit;
+   font-size: $md-text;
 
    // a {
    //    padding: 0 $sm-pad;
@@ -364,6 +376,10 @@ nav.concept-mobile {
       max-width: 180px;
    }
 
+   .logo-container.arebyte {
+      max-width: 210px;
+   }
+
 }
 
 footer {
@@ -373,7 +389,7 @@ footer {
    flex-direction: row;
    justify-content: flex-end;
    align-items: center;
-   z-index: 2;
+   z-index: 99;
    color: $blue;
 
    .footer-links {
@@ -381,7 +397,8 @@ footer {
       flex-direction: row;
 
       > * {
-         padding-left: 30px;
+         cursor: pointer;
+         margin-left: 30px;
       }
    }
 
@@ -433,14 +450,14 @@ footer {
    .close {
       cursor: pointer;
       position: absolute;
-      top: 10%;
-      right: 28px;
+      top: 12%;
+      right: 40px;
       z-index: 10;
    }
 
    .cta-more-info {
       position: absolute;
-      top: 19%;
+      top: 20%;
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
@@ -462,7 +479,7 @@ footer {
       svg {
          stroke-width: 20px;
          stroke: $bg-orange;
-         width: 250px;
+         width: 330px;
          fill: $white;
       }
    }
@@ -474,8 +491,8 @@ footer {
    .close {
       cursor: pointer;
       transform: scale(6);
-      top: 41%;
-      right: 129px;
+      top: 42%;
+      right: 167px;
    }
 
    .cta-more-info {
@@ -487,6 +504,15 @@ footer {
          stroke-width: 40px;
       }
    }
+}
+
+.home {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   background-color: $grey;
+   padding: 10px 20px 10px 20px;
+   color: $blue;
 }
  
 /// Ars Electronica
@@ -518,13 +544,24 @@ footer {
       padding: $sm-pad $unit;
    }
 
-   .day:nth-child(odd) {
+   // footer {
+   //    position: fixed;
+   //    bottom: 0;
+   //    left: 0;
+   // }
+
+   .day:nth-child(even) {
       background-color: $black;
       color: $white;
    }
 
    .day .video {
       margin-bottom: $unit;
+   }
+
+   .day p,
+   .videos-intro p {
+      text-align: center;
    }
 
    .day-intro {
@@ -623,6 +660,11 @@ footer {
       padding: $sm-pad $unit;
    }
 
+   .video {
+      margin-top: $sm-pad;
+      margin-bottom: $unit;
+   }
+
    .description p {
       padding-top: $half-unit;
    }
@@ -630,6 +672,11 @@ footer {
    .day:nth-child(even) {
       background-color: $bg-orange;
       color: $white;
+   }
+
+   .day p,
+   .description {
+      text-align: center;
    }
 
    .the-other-team {
@@ -643,7 +690,12 @@ footer {
    }
 }
 
-@media (max-width: 800px) {
+.ars-team,
+.the-other-team {
+   margin-bottom: $unit;
+}
+
+@media (max-width: 1000px) {
 
    nav.concept-desktop {
       display: none;
@@ -651,6 +703,7 @@ footer {
 
    nav.concept-mobile {
       display: flex;
+      font-size: $md-text;
    }
 
 }
@@ -668,7 +721,8 @@ footer {
    h3,
    .introduction,
    .text-carousel .carousel-cell h4,
-   #the-other-page .intro-top {
+   #the-other-page .intro-top,
+   .the-other .the-other-stream {
       font-size: $mobile-md-text;
    }
 
@@ -676,26 +730,49 @@ footer {
       font-size: $mobile-md-text;
    }
 
+   .quotes-carousel p {
+      max-width: 70vw;
+   }
+
    .introduction .small-text {
       font-size: $sm-text;
+   }
+
+   #ars .description .ars-photos .image-container img,
+   .photos .photos-carousel .carousel-cell img {
+      max-height: 50vh;
    }
 
 }
 
 @media (max-width: 500px) {
 
+   .intro-video {
+      background-color: $black;
+      padding-bottom: 100vh;
+
+      iframe {
+         height: 30vh;
+         padding-top: 30vh;
+      }
+   }
+
    .text-carousel .carousel-cell .mirror {
       display: none;
    }
 
    .introduction {
-      padding: 0 $half-unit $half-unit $half-unit;
+      padding: $half-unit;
    }
 
    .the-other p,
    nav.concept,
    .ars-electronica p {
       padding: $sm-pad $half-unit;
+   }
+
+   nav.concept {
+      padding: 10px $sm-pad;
    }
 
    .text-carousel .carousel-cell .not-mirror,
@@ -709,6 +786,7 @@ footer {
 
    .talks .videos-container {
       flex-direction: column;
+      padding-top: 0;
 
       .video-container {
          width: 100%;
@@ -720,7 +798,7 @@ footer {
       }
 
       p {
-         padding: $sm-pad $half-unit 0 $half-unit;
+         padding: $sm-pad $half-unit $sm-pad $half-unit;
       }
    }
 
@@ -730,6 +808,12 @@ footer {
       div {
          width: 100%;
       }
+   }
+
+   .ars-team,
+   .the-other-team {
+      margin-bottom: 0;
+      margin-top: $half-unit;
    }
 
    .logos {
@@ -743,6 +827,10 @@ footer {
    
       .logo-container.logo-big {
          max-width: 100px;
+      }
+
+      .logo-container.arebyte {
+         max-width: 105px;
       }
    }
 
@@ -793,8 +881,13 @@ footer {
    
    }
 
+   #ars .video,
+   #the-other-page .video {
+      margin-left: -30px;
+      margin-right: -30px;
+   }
+
    footer {
-      flex-direction: column;
       align-items: flex-end;
       padding-bottom: 10px;
    

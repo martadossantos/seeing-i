@@ -55,6 +55,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
       newsForm.classList.remove('d-none');
    })
 
+   ///
+   ///
+   ///
+   /// HIDE BUTTON ON SCROLL
+   var body = document.body, html = document.documentElement;
+
+   var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+   
+   document.addEventListener('scroll', () => {
+      let cta = document.querySelector('#the-other-cta');
+      let innerHeight = window.innerHeight;
+
+      if (pageYOffset > (height - innerHeight - 500)) {
+         cta.classList.add('invisible')
+      } else {
+         cta.classList.remove('invisible')
+      }
+   })
+
 
    ///
    ///

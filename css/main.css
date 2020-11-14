@@ -14,6 +14,7 @@ main {
 h3 {
   font-size: 26px;
   padding: 20px;
+  text-align: center;
 }
 
 h6 {
@@ -24,6 +25,11 @@ h6 {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+#the-other-cta.invisible {
+  opacity: 0;
+  transition: opacity 2s ease;
 }
 
 .bold, .quotes-carousel .quo-source {
@@ -71,7 +77,7 @@ a {
 }
 
 .introduction {
-  padding: 120px 120px 60px 120px;
+  padding: 90px 90px 60px 90px;
   font-size: 26px;
 }
 .introduction p {
@@ -95,6 +101,10 @@ a {
 }
 .the-other .learn-more {
   padding: 0;
+}
+.the-other .the-other-stream {
+  padding-bottom: 20px;
+  font-size: 26px;
 }
 .the-other .button {
   background-color: #F99437;
@@ -138,6 +148,7 @@ nav.concept {
   display: flex;
   justify-content: space-between;
   padding: 10px 60px;
+  font-size: 26px;
 }
 
 nav.concept-mobile {
@@ -296,6 +307,9 @@ nav.concept-mobile {
 .logos .logo-container.logo-big {
   max-width: 180px;
 }
+.logos .logo-container.arebyte {
+  max-width: 210px;
+}
 
 footer {
   background-color: #F4F4F4;
@@ -304,7 +318,7 @@ footer {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  z-index: 2;
+  z-index: 99;
   color: #0a5396;
 }
 footer .footer-links {
@@ -312,7 +326,8 @@ footer .footer-links {
   flex-direction: row;
 }
 footer .footer-links > * {
-  padding-left: 30px;
+  cursor: pointer;
+  margin-left: 30px;
 }
 footer > * {
   padding: 10px 20px 10px 0;
@@ -354,13 +369,13 @@ footer form input.button {
 #the-other-cta .close {
   cursor: pointer;
   position: absolute;
-  top: 10%;
-  right: 28px;
+  top: 12%;
+  right: 40px;
   z-index: 10;
 }
 #the-other-cta .cta-more-info {
   position: absolute;
-  top: 19%;
+  top: 20%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -381,7 +396,7 @@ footer form input.button {
 #the-other-cta #drag svg {
   stroke-width: 20px;
   stroke: #F99437;
-  width: 250px;
+  width: 330px;
   fill: #FFFFFF;
 }
 
@@ -391,14 +406,23 @@ footer form input.button {
 #the-other-cta.mini .close {
   cursor: pointer;
   transform: scale(6);
-  top: 41%;
-  right: 129px;
+  top: 42%;
+  right: 167px;
 }
 #the-other-cta.mini .cta-more-info {
   display: none;
 }
 #the-other-cta.mini #drag svg {
   stroke-width: 40px;
+}
+
+.home {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #F4F4F4;
+  padding: 10px 20px 10px 20px;
+  color: #0a5396;
 }
 
 #ars {
@@ -423,12 +447,16 @@ footer form input.button {
 #ars section {
   padding: 20px 60px;
 }
-#ars .day:nth-child(odd) {
+#ars .day:nth-child(even) {
   background-color: #222222;
   color: #FFFFFF;
 }
 #ars .day .video {
   margin-bottom: 60px;
+}
+#ars .day p,
+#ars .videos-intro p {
+  text-align: center;
 }
 #ars .day-intro {
   padding-top: 60px;
@@ -495,12 +523,20 @@ footer form input.button {
 #the-other-page section {
   padding: 20px 60px;
 }
+#the-other-page .video {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
 #the-other-page .description p {
   padding-top: 30px;
 }
 #the-other-page .day:nth-child(even) {
   background-color: #F99437;
   color: #FFFFFF;
+}
+#the-other-page .day p,
+#the-other-page .description {
+  text-align: center;
 }
 #the-other-page .the-other-team {
   display: flex;
@@ -511,13 +547,19 @@ footer form input.button {
   width: 45%;
 }
 
-@media (max-width: 800px) {
+.ars-team,
+.the-other-team {
+  margin-bottom: 60px;
+}
+
+@media (max-width: 1000px) {
   nav.concept-desktop {
     display: none;
   }
 
   nav.concept-mobile {
     display: flex;
+    font-size: 26px;
   }
 }
 @media (max-width: 700px) {
@@ -532,7 +574,8 @@ footer form input.button {
   h3,
 .introduction,
 .text-carousel .carousel-cell h4,
-#the-other-page .intro-top {
+#the-other-page .intro-top,
+.the-other .the-other-stream {
     font-size: 20px;
   }
 
@@ -540,23 +583,45 @@ footer form input.button {
     font-size: 20px;
   }
 
+  .quotes-carousel p {
+    max-width: 70vw;
+  }
+
   .introduction .small-text {
     font-size: 20px;
   }
+
+  #ars .description .ars-photos .image-container img,
+.photos .photos-carousel .carousel-cell img {
+    max-height: 50vh;
+  }
 }
 @media (max-width: 500px) {
+  .intro-video {
+    background-color: #222222;
+    padding-bottom: 100vh;
+  }
+  .intro-video iframe {
+    height: 30vh;
+    padding-top: 30vh;
+  }
+
   .text-carousel .carousel-cell .mirror {
     display: none;
   }
 
   .introduction {
-    padding: 0 30px 30px 30px;
+    padding: 30px;
   }
 
   .the-other p,
 nav.concept,
 .ars-electronica p {
     padding: 20px 30px;
+  }
+
+  nav.concept {
+    padding: 10px 20px;
   }
 
   .text-carousel .carousel-cell .not-mirror,
@@ -570,6 +635,7 @@ nav.concept,
 
   .talks .videos-container {
     flex-direction: column;
+    padding-top: 0;
   }
   .talks .videos-container .video-container {
     width: 100%;
@@ -578,7 +644,7 @@ nav.concept,
     padding: 0;
   }
   .talks .videos-container p {
-    padding: 20px 30px 0 30px;
+    padding: 20px 30px 20px 30px;
   }
 
   .team-container {
@@ -586,6 +652,12 @@ nav.concept,
   }
   .team-container div {
     width: 100%;
+  }
+
+  .ars-team,
+.the-other-team {
+    margin-bottom: 0;
+    margin-top: 30px;
   }
 
   .logos .logo-container {
@@ -596,6 +668,9 @@ nav.concept,
   }
   .logos .logo-container.logo-big {
     max-width: 100px;
+  }
+  .logos .logo-container.arebyte {
+    max-width: 105px;
   }
 
   #the-other-cta {
@@ -631,8 +706,13 @@ nav.concept,
     padding: 20px 30px;
   }
 
+  #ars .video,
+#the-other-page .video {
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+
   footer {
-    flex-direction: column;
     align-items: flex-end;
     padding-bottom: 10px;
   }
