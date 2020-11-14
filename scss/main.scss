@@ -842,6 +842,10 @@ footer {
       .intro-top {
          padding: 0 $half-unit;
       }
+
+      .intro h3 {
+         padding: $sm-pad $half-unit;
+      }
    
       .intro-bottom {
          padding: 0 $half-unit;
@@ -857,6 +861,7 @@ footer {
    
       .the-other-team {
          flex-direction: column;
+         margin-bottom: $unit;
    
          div {
             width: 100%;
@@ -878,7 +883,11 @@ footer {
       section {
          padding: $sm-pad $half-unit;
       }
-   
+   }
+
+   #the-other-page .the-other-team,
+   #ars .recorder {
+      padding-bottom: $unit;
    }
 
    #ars .video,

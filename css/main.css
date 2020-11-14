@@ -680,6 +680,9 @@ nav.concept,
   #the-other-page .intro-top {
     padding: 0 30px;
   }
+  #the-other-page .intro h3 {
+    padding: 20px 30px;
+  }
   #the-other-page .intro-bottom {
     padding: 0 30px;
   }
@@ -691,6 +694,7 @@ nav.concept,
   }
   #the-other-page .the-other-team {
     flex-direction: column;
+    margin-bottom: 60px;
   }
   #the-other-page .the-other-team div {
     width: 100%;
@@ -704,6 +708,11 @@ nav.concept,
   }
   #ars section {
     padding: 20px 30px;
+  }
+
+  #the-other-page .the-other-team,
+#ars .recorder {
+    padding-bottom: 60px;
   }
 
   #ars .video,
