@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
    });
 
    var photosCar = document.querySelector('.photos-carousel');
-   var flkty = new Flickity( photosCar, {
+   var flktyPho = new Flickity( photosCar, {
    // options
    cellAlign: 'left',
    contain: true,
@@ -42,6 +42,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
    selectedAttraction: 0.2,
    friction: 0.8
    });
+
+   
+
+
 
    ///
    ///

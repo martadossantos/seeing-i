@@ -29,7 +29,7 @@ a {
 
 #the-other-cta.invisible {
   opacity: 0;
-  transition: opacity 2s ease;
+  transition: opacity 1s ease;
 }
 
 .bold, .quotes-carousel .quo-source {
@@ -282,7 +282,7 @@ nav.concept-mobile {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 0 60px;
   margin-top: 30px;
@@ -306,6 +306,9 @@ nav.concept-mobile {
 }
 .logos .logo-container.logo-big {
   max-width: 180px;
+}
+.logos .logo-container.logo-eu {
+  max-width: 200px;
 }
 .logos .logo-container.arebyte {
   max-width: 210px;
@@ -388,6 +391,10 @@ footer form input.button {
   margin-top: 10px;
   display: inline-block;
   padding: 5px 7px;
+}
+#the-other-cta .cta-more-info .stream {
+  width: -webkit-max-content;
+  width: max-content;
 }
 #the-other-cta #drag {
   padding: 10px;
@@ -560,6 +567,10 @@ footer form input.button {
   nav.concept-mobile {
     display: flex;
     font-size: 26px;
+  }
+
+  .logos .logo-container.logo-eu {
+    max-width: 180px;
   }
 }
 @media (max-width: 700px) {
@@ -752,9 +763,12 @@ nav.concept,
     max-width: 70px;
   }
   .logos .logo-container.logo-small {
-    max-width: 50px;
+    max-width: 40px;
   }
   .logos .logo-container.logo-big {
-    max-width: 80px;
+    max-width: 75px;
+  }
+  .logos .logo-container.logo-eu {
+    max-width: 90px;
   }
 }

@@ -46,7 +46,7 @@ a {
 
 #the-other-cta.invisible {
    opacity: 0;
-   transition: opacity 2s ease;
+   transition: opacity 1s ease;
 }
 
 .bold {
@@ -346,7 +346,7 @@ nav.concept-mobile {
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
-   justify-content: space-around;
+   justify-content: space-between;
    align-items: center;
    padding: 0 $unit;
    margin-top: $half-unit;
@@ -374,6 +374,10 @@ nav.concept-mobile {
 
    .logo-container.logo-big {
       max-width: 180px;
+   }
+
+   .logo-container.logo-eu {
+      max-width: 200px;
    }
 
    .logo-container.arebyte {
@@ -468,6 +472,10 @@ footer {
          margin-top: 10px;
          display: inline-block;
          padding: 5px 7px;
+      }
+
+      .stream {
+         width: max-content;
       }
 
    }
@@ -706,6 +714,10 @@ footer {
       font-size: $md-text;
    }
 
+   .logos .logo-container.logo-eu {
+      max-width: 180px;
+   }
+
 }
 
 @media (max-width: 700px) {
@@ -937,11 +949,15 @@ footer {
       }
    
       .logo-container.logo-small {
-         max-width: 50px;
+         max-width: 40px;
       }
    
       .logo-container.logo-big {
-         max-width: 80px;
+         max-width: 75px;
+      }
+
+      .logo-container.logo-eu {
+         max-width: 90px;
       }
    }
 }
